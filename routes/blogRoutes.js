@@ -61,3 +61,42 @@ module.exports = app => {
     }
   });
 };
+
+// // Using query builder
+// const query = Person.
+// find({
+//     occupation: /host/
+//   }).where('name.last').equals('Ghost')
+//   .where('age').gt(17).lt(66)
+//   .where('likes') in (['vaporizing', 'talking'])
+//   .limit(10)
+//   .sort('-occupation')
+//   .select('name occupation');
+
+// // Check to see if the query has been fetched in Redis
+
+// query.exec = function () {
+//   //to check to see if this query has been already executed 
+//   // and if it has then return the result right away
+
+
+//   // otherwise issue this query as *normal*
+
+//   //then save this result in redis
+// }
+
+// // Callback
+// query.exec((err, result) => {
+//   console.log(result);
+// })
+// // Callback
+// // Same as ..
+// // Promise
+// query.then((result) => {
+//   console.log(result);
+// });
+// // Promise
+// // Same as ..
+// // Async-Await
+// const result = await query;
+// // Async-Await
